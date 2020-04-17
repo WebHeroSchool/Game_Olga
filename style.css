@@ -94,6 +94,7 @@ body {
     font-size: 50px;
     line-height: 59px;
     position: relative;
+    outline: none;
 }
 
 .list__item:hover {
