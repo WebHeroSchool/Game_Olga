@@ -1,0 +1,478 @@
+body {
+    background-image: url(img/Background.png);
+    margin: 0 auto;
+}
+
+.wrap {
+    display: flex;
+    box-sizing: border-box;
+    min-width: 375px;
+    max-width: 1340px;
+    min-height: 750px;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+
+.title {
+    color: #ffff;
+    font-size: 45px;
+    line-height: 67px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.subtitle {
+    color: #ffff;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.list {
+    color: #ffff;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 59px;
+    margin-bottom: 50px;
+    margin-left: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.button {
+    background: #D62B2E;
+    border-radius: 7px;
+    width: 352px;
+    height: 95px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 37px;
+    color: #ffff;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+
+.card-one {
+    height: 300px;
+    width: 200px;
+    transform: rotate(11.9deg);
+}
+
+.card-two {
+    height: 301px;
+    width: 218px;
+    transform: rotate(39.26deg);
+}
+
+.list__item {
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    color: #ffff;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    position: relative;
+}
+
+.list__item:hover {
+    opacity: .8;
+}
+
+.checked::before {
+    content: "";
+    background-color: #D62B2E;
+    position: absolute;
+    top: 22px;
+    left: -30px;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+}
+
+.card__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 218px;
+    height: 341px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__backside {
+    background: url(img/card.png) no-repeat;
+
+}
+
+.card__backside, 
+.looser__card,
+.winner__card {
+    position: absolute;
+    width: 165px;
+    height: 242px;
+    backface-visibility: hidden;
+    background-size: 168px 245px;
+}
+
+.card__backside:hover {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transform: rotate(-3.08deg) translateY(-15px);
+    transition: .4s ease;
+}
+
+.container__three-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 800px;
+    margin: auto;
+}
+
+.container__six-card {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 60%;
+}
+
+.container__nine-card {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 100%;
+}
+
+.click {
+    transform: rotateY(180deg);
+}
+
+.winner__card {
+    background: url(img/bug.png);
+    transform: rotateY(180deg);
+     background-size: 168px 245px;   
+}
+
+.looser__card {
+    background: url(img/gameOver.png);
+    transform: rotateY(180deg); 
+     background-size: 168px 245px;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 1340px;
+    min-width: 375px;
+    min-height: 750px;
+}
+
+@media (max-width: 320px) {
+.cards {
+    display: none;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.subtitle {
+    margin-left: 20px;
+     font-size: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list__item {
+    font-size: 35px;
+}
+
+.button {
+    width: 200px;
+    height: 95px;
+    font-size: 20px;
+}
+
+.container__three-card {
+    width: 300px;
+}
+.card__container,
+.card__backside,
+.looser__card,
+.winner__card {
+    background-size: 80px 120px;
+    height: 120px;
+    width: 80px;
+  }
+.container__six-card {
+    width: 300px;
+    height: auto;
+}  
+.container__nine-card {
+     width: 300px;
+    height: auto;
+}
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+
+.cards {
+    display: none;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.subtitle {
+    margin-left: 15px;
+    font-size: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list__item {
+    font-size: 35px;
+}
+
+.button {
+    width: 200px;
+    height: 95px;
+    font-size: 20px;
+}
+
+.container__three-card {
+    width: 300px;
+}
+.card__container,
+.card__backside,
+.looser__card,
+.winner__card {
+    background-size: 80px 120px;
+    height: 120px;
+    width: 80px;
+}
+.container__six-card {
+    width: 300px;
+    height: auto;
+}
+.container__nine-card {
+     width: 300px;
+    height: auto;
+}
+}
+@media (min-width: 481px) and (max-width: 768px) { 
+.cards {
+    display: none;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.subtitle {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list__item {
+    font-size: 45px;
+}
+
+.button {
+    width: 350px;
+    height: 125px;
+    font-size: 40px;
+}
+
+.container__three-card {
+    width: 600px;
+    height: 230px;
+}
+.card__container,
+.card__backside,
+.looser__card,
+.winner__card {
+    background-size: 146px 232px;
+    height: 230px;
+    width: 145px;
+}
+.container__six-card {
+    width: 500px;
+    height: auto;
+}
+.container__nine-card {
+     width: 900px;
+    height: auto;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { 
+.cards {
+    display: none;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.subtitle {
+    margin-left: 35px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list__item {
+    font-size: 45px;
+}
+
+.button {
+    width: 350px;
+    height: 125px;
+    font-size: 40px;
+}
+
+.container__three-card {
+    width: 600px;
+    height: 230px;
+}
+.card__container,
+.card__backside,
+.looser__card,
+.winner__card {
+    background-size: 146px 232px;
+    height: 230px;
+    width: 145px;
+}
+.container__six-card {
+    width: 1000px;
+    height: auto;
+}
+.container__nine-card {
+    width: 900px;
+    height: auto;
+}
+}
+
+@media (min-width: 1025px) and (max-width: 1077px) {
+.cards {
+    display: none;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.subtitle {
+    margin-left: 35px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list__item {
+    font-size: 45px;
+}
+
+.button {
+    width: 350px;
+    height: 125px;
+    font-size: 40px;
+}
+
+.container__three-card {
+    width: 600px;
+    height: 230px;
+}
+ .card__container,
+ .card__backside,
+ .looser__card,
+ .winner__card {
+    background-size: 146px 232px;
+    height: 230px;
+    width: 145px;
+}
+.container__six-card {
+    width: 1000px;
+    height: auto;
+}
+.container__nine-card {
+     width: 900px;
+    height: auto;
+}
+}
